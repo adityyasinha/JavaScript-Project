@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Master</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="theme-toggle-container">
+    <label class="theme-switch">
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider"></span>
+      <span class="icon"><i class="fas fa-sun"></i></span>
+    </label>
+  </div>
+
+  <div class="container">
+    <!-- START SCREEN -->
+    <div class="screen active" id="start-screen">
+      <h1>🧠 Quiz Time!</h1>
+      <p>Test your knowledge with our interesting quiz questions!</p>
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div class="screen" id="quiz-screen">
+      <div class="quiz-header">
+        <h2 id="question-text">Question goes here</h2>
+        <div class="quiz-info">
+          <p>Question <span id="current-question">1</span> of <span id="total-questions">5</span></p>
+          <p>Score: <span id="score">0</span></p>
+        </div>
+      </div>
+      <div id="answers-container" class="answers-container"></div>
+      <div class="progress-bar"><div id="progress" class="progress"></div></div>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <div class="screen" id="result-screen">
+      <h1>🎉 Quiz Results</h1>
+      <div class="result-info">
+        <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+        <div id="result-message">Good job!</div>
+      </div>
+      <button id="restart-btn">Try Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
